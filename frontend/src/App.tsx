@@ -49,7 +49,7 @@ function App() {
         <main className = "main">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/products" element={<Products />} />
+            <Route path="/catalog" element={<Products />} />
           </Routes>
         </main>
         
