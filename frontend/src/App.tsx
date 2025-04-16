@@ -55,9 +55,6 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />
-            <Route path="orders" element={<Orders />}></Route>
-            <Route path="/order/:id" element={<OrderDetails />}></Route>
-            <Route path="payment" element={<Payment />}></Route>
           </Routes>
         </main>
         
