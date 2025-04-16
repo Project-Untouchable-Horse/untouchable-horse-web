@@ -61,7 +61,7 @@ function App() {
           </Routes>
         </main>
         <footer className="footer">
-          &copy; 2024 Desert Deer
+          &copy; 2025 Untouchable Horse
         </footer>
       </div>
       </Router>
