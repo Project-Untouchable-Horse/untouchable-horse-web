@@ -54,10 +54,15 @@ function App() {
         <main className = "main">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/products" element={<Products />} />
+            <Route path="/catalog" element={<Products />} />
+            <Route path="orders" element={<Orders />}></Route>
+            <Route path="/order/:id" element={<OrderDetails />}></Route>
+            <Route path="payment" element={<Payment />}></Route>
           </Routes>
         </main>
-        
+        <footer className="footer">
+          &copy; 2024 Desert Deer
+        </footer>
       </div>
       </Router>
   );
