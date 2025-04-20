@@ -1,11 +1,38 @@
-import data from "./data";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import React from 'react';
 
+type Product = {
+  id: number;
+  name: string;
+  description: string;
+  brand: string;
+  price: number;
+  rating: number;
+  numberOfReviews: number;
+  imageUrl: string;
+  }
+
+const emptyProducts: Product [] = [];
+
 function Products(){
+  const [products, setProducts] = useState<Product[]>(emptyProducts);
+  
+  useEffect(()=> {
+    axios.get<Product[]>("http://localhost:5263/catalog",
+    {
+    headers: {
+    "Content-Type":"application/json",
+    },
+    })
+    .then((response)=>setProducts(response.data))
+    .catch((error) => console.log(error));
+    }, []);
+    
     return (
     <div className="content">
 <ul className="products">
-    {data.products.map((product) => (
+    {products.map((product) => (
     <li>
       <div className="product">
         <img
